@@ -37,3 +37,6 @@ jobs:
 
       - name: Setting up Redis
         run: sudo redis-server /etc/redis/redis.conf --port 6379
+
+      - name: Build and test
+        run: ./mvnw -q test
