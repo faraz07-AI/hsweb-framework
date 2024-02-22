@@ -29,6 +29,5 @@ jobs:
           architecture: 'x64'
           distribution: 'adopt'
 
-      - name: Setting up Redis
-        run: |
-          sudo redis-server /etc/redis/redis.conf --port 6379
+      - name: setting up permissions for making Maven wrapper executable
+        run: chmod +x mvnw
