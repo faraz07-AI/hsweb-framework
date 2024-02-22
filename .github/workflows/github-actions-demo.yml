@@ -30,4 +30,5 @@ jobs:
           distribution: 'adopt'
 
       - name: Setting up Redis
-        run: sudo redis-server /etc/redis/redis.conf --port 6379
+        run: |
+          sudo redis-server /etc/redis/redis.conf --port 6379
