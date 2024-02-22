@@ -31,3 +31,6 @@ jobs:
 
       - name: setting up permissions for making Maven wrapper executable
         run: chmod +x mvnw
+
+      - name: Setting up Redis
+        run: sudo redis-server /etc/redis/redis.conf --port 63
