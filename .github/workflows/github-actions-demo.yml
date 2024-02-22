@@ -34,3 +34,6 @@ jobs:
 
       - name: Installing Redis
         run: sudo apt-get install redis-server
+
+      - name: Setting up Redis
+        run: sudo redis-server /etc/redis/redis.conf --port 6379
