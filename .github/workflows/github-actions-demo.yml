@@ -31,3 +31,4 @@ jobs:
 
       - name: setting up permissions for making Maven wrapper executable
         run: chmod +x mvnw
+
