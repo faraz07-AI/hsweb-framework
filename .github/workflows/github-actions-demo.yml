@@ -31,6 +31,3 @@ jobs:
 
       - name: setting up permissions for making Maven wrapper executable
         run: chmod +x mvnw
-
-      - name: Installing Redis
-        run: sudo apt-get install redis-server
