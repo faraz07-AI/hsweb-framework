@@ -12,11 +12,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-#    services:
-#      redis:
-#        image: redis
-#        ports:
-#          - 6379:6379
+    services:
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
 
     steps:
       - name: Checkout code
@@ -43,3 +43,10 @@ jobs:
 
       - name: Uploading code coverage data to the Codecov service
         run: bash <(curl -s https://codecov.io/bash)
+
+      - name: Caching packages of Maven
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
