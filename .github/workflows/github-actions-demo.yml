@@ -26,4 +26,6 @@ jobs:
           key: "${{ runner.os }}-path"
 
       - run: chmod +x mvnw
+      - name: Installing Redis
+        run: sudo apt-get install redis-server
       - run: bash <(curl -s https://codecov.io/bash)
