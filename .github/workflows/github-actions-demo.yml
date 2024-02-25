@@ -7,11 +7,13 @@ on:
   push:
     branches:
       - branch-2
-
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-      steps:
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3.5.0
+
         with: path
         with:
           java-version:
