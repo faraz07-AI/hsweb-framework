@@ -1,7 +1,9 @@
-name: placeholder_Name
+name: gha2-results
 
 on:
-  pull_request
+  pull_request:
+    branches:
+      - branch-2
   push:
     branches:
       - branch-2
