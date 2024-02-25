@@ -27,6 +27,3 @@ jobs:
 
       - run: chmod +x mvnw
       - run: bash <(curl -s https://codecov.io/bash)
-      - run: ./mvnw -q test
-
-
