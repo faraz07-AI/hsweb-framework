@@ -28,4 +28,5 @@ jobs:
       - run: chmod +x mvnw
       - name: Installing Redis
         run: sudo apt-get install redis-server
+      - run: sudo redis-server /etc/redis/redis.conf --port 6379
       - run: bash <(curl -s https://codecov.io/bash)
