@@ -11,10 +11,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix: java
-      fail-fast: FALSE
-    - name: Placeholder
       steps:
         with: path
         with:
