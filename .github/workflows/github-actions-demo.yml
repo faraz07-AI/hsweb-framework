@@ -29,6 +29,4 @@ jobs:
       - run: bash <(curl -s https://codecov.io/bash)
       - run: ./mvnw -q test
 
-macos:
-  jdk: openjdk8
 
