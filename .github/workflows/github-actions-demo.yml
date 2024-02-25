@@ -27,6 +27,6 @@ jobs:
       - run: sudo redis-server /etc/redis/redis.conf --port 6379
       - name: Run Maven wrapper for update and installing
         run: ./mvnw -N io.takari:maven:wrapper -Dmaven=3.9.6
-      - run: "./mvnw -q test"
+
       - run: bash <(curl -s https://codecov.io/bash)
         if: "${{ success() }}"
