@@ -25,9 +25,9 @@ jobs:
           path: "${{ github.workspace }}/.m2/repository"
           key: "${{ runner.os }}-path"
 
+      - run: chmod +x mvnw
       - run: bash <(curl -s https://codecov.io/bash)
-            ./mvnw -q test
-            chmod +x mvnw
+      - run: ./mvnw -q test
 
 macos:
   jdk: openjdk8
